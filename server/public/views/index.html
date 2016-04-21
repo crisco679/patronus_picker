@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="patronusApp">
+  <head>
+    <meta charset="utf-8">
+    <title>PATRONUS HANDLER</title>
+    <script src="vendor/angular/angular.min.js"></script>
+    <script src="assets/scripts/client.min.js"></script>
+  </head>
+  <body ng-controller="magicController">
+    <div>
+      <label>Enter first name</label>
+      <input type="text" ng-model="first_name"/>
+      <br/>
+      <label>Enter last name</label>
+      <input type="text" ng-model="last_name"/>
+      <br/>
+      <button ng-click="submitName()">SUBMIT</button>
+      <label>Enter Patronus</label>
+      <input type="text" ng-model="patronus_name"/>
+      <button ng-click="submitPatronus()">SUBMIT</button>
+      <ul>
+        <li ng-repeat="patronus in patronus_names">
+          {{patronus}}
+        </li>
+      </ul>
+      <br/>
+    </div>
+  </body>
+</html>
