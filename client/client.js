@@ -12,7 +12,7 @@ app.controller("magicController", ['$scope', '$http', function($scope, $http){
     $http.get('/patronus').then(function(response){
       console.log('this is sparta', response);
       if(response.status !==200){
-        console.log('shits all broke');
+        console.log('Error in fetchPatronus');
       }
       $scope.patronus_name = '';
       $scope.patronus_names = response.data;
@@ -38,7 +38,7 @@ app.controller("magicController", ['$scope', '$http', function($scope, $http){
     console.log('names submitted');
     $http.post('/people',
     {first_name: $scope.first_name, last_name: $scope.last_name}
-  ).then(fetchNames());
+  ).then(fetchNames);
 }
 fetchNames();
 
@@ -46,7 +46,7 @@ $scope.submitPatronus = function(){
   console.log('patronus submitted');
   $http.post('/patronus',
   {patronus_name: $scope.patronus_name}
-).then(fetchPatronus());
+).then(fetchPatronus);
 }
 fetchPatronus();
 
