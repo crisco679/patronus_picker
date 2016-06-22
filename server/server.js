@@ -9,7 +9,7 @@ app.use('/', index);
 app.use(express.static('server/public'));
 
 
-//connection.initializeDB();
+connection.initializeDB();
 
 
 

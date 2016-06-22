@@ -31,7 +31,7 @@ router.post('/', function(req, res){
     });
   }
 });
-
+});
 router.get('/', function(req, res){
   pg.connect(connectionString, function(err, client, done){
   if (err) {
@@ -53,7 +53,6 @@ router.get('/', function(req, res){
       done();
     });
   }
-});
 });
 });
 module.exports = router;
